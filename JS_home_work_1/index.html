@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work 1</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <section class="homework1 center">
+        <h1 class="homework1__header">Урок 2. Семинар. Знакомство с JavaScript</h1>
+        <article class="task1">
+            <h2 class="task1__heading">Задание 1</h2>
+            <p class="task1__text">Необходимо создать переменную в которой будет храниться температура в градусах
+                Цельсия, преобразовать значение в температуру по фаренгейту.
+                Формула перевода градусов Цельсия в градусы Фаренгейта: градусы Фаренгейта = (9 / 5) * градусы Цельсия +
+                32
+                Вывести в консоль температуру в Цельсиях и Фаренгейтах.</p>
+        </article>
+        <article class="task2">
+            <h2 class="task2__heading">Задание 2</h2>
+            <p class="task2__text">Необходимо создать переменную name, записать в эту переменную свое имя. Необходимо
+                также создать переменную admin и присвоить этой переменной значение из переменной name. Вывести значение
+                переменной admin в консоль.</p>
+        </article>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        // Задание 1
+        let temperatureC = 1
+        let temperatureF = (9 / 5) * temperatureC + 32
+        
+        console.log(`Температура в градусах Цельсия: ${temperatureC}.`);
+        console.log(`Температура в градусах Фарингейта: ${temperatureF}.`);
+
+        // Задание 2
+        let myName = 'Anvar'
+        let admin = null
+
+        admin = myName
+        // admin = admin + myName - не корректно
+
+        console.log(`${admin}`)
+    </script>
+</body>
+
+</html>
