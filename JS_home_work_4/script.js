@@ -76,7 +76,7 @@ function searchNum(array) {
 const randomArray = randomArr(0, 9, 5);
 console.log(...randomArray);
 
-
+// 1
 console.log(`Сумма элементов массива(sumNum): ${sumNum(randomArray)}`);
 // Метод reduce() принимает два параметра: функцию-колбэк и начальное значение для аккумулятора.
 // Сама функция-колбэк может принимать четыре параметра:
@@ -87,12 +87,39 @@ console.log(`Сумма элементов массива(sumNum): ${sumNum(rand
 const sum = randomArray.reduce((prev, curr) => prev + curr, 0);
 console.log(`Сумма элементов массива(reduce): ${sum}`);
 
-
+// 2
 console.log(`Минимальное число массива(minNumber): ${minNumber(randomArray)}`);
 const min = Math.min(...randomArray); // Math.min() + spread (...) 
 console.log(`Минимальное число массива(Math.min() + spread (...)): ${min}`);
 
-
+// 3
 searchNum(randomArray);
 console.log(randomArray.indexOf(3)); // Вернет индекс первой найденной тройки. Если такого числа нет возвращается -1.
 console.log(`Есть ли в массиве число 3: ${randomArray.includes(3)}`);
+
+
+
+// *Необязательное задание. *
+// Необходимо вывести горку в консоль (используя цикл for), как показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5:
+
+// x
+// xx
+// xxx
+// xxxx
+// xxxxx
+
+
+let str = "x";
+for (let i = 0; i < 20; i++) {
+    console.log(str + '\n');
+    str += "x";
+}
+
+
+for (let i = 1; i <= 20; i++) {
+    let str = "";
+    for (let j = 0; j < i; j++) {
+        str += "x";
+    }
+    console.log(str);
+}
