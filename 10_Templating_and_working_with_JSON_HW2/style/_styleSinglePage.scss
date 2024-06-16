@@ -1,0 +1,323 @@
+@import "mixins";
+
+.breadcrumbs {
+    height: 148px;
+    padding-top: 22px;
+    background-color: #f8f3f4;
+
+    @include betweenflex();
+
+    &__heading {
+        font-family: Lato;
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #f16d7f;
+    }
+
+    //  убираем стилизацию списка точками
+    &__ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    // Добавляем псевдоэлемент  черточку(записываем в content: ;)после элемента Li
+    // Затем необходимо убрать черточку для последнего элемента. Реализуем через last-child и псевдокласс not
+    &__li:not(:last-child)::after {
+        content: "/";
+        padding-left: 8px;
+        padding-right: 8px;
+
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #636363;
+    }
+
+    &__link {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #636363;
+    }
+
+    // &__link_site {
+    //     font-weight: 700;
+    //     color: #f16d7f;
+    // }
+
+    // Стилистику для последней ссылки можно задать так же с помощью псевдокласса
+
+    &__li:last-child .breadcrumbs__link {
+        font-weight: 700;
+        color: #f16d7f;
+    }
+}
+
+.productcover {
+    height: 777px;
+    background-color: #f7f7f7;
+    border: 1px solid #eaeaea;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__arrow {
+        width: 47px;
+        height: 47px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__arrow:hover {
+        background-color: rgba(42, 42, 42, 0.14);
+    }
+
+    &__image {
+        width: 597px;
+        height: 724px;
+    }
+}
+
+// стрелки
+
+.fa-angle-right {
+    font-size: 24px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.fa-angle-left {
+    font-size: 24px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+
+.contentbox {
+    transform: translateY(-75px);
+
+    width: 1141px;
+    height: 730px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boxtop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #f16d7f;
+
+        border-bottom: 3px solid $singlPageEf5b70;
+
+        padding-top: 73px;
+        padding-bottom: 14px;
+
+    }
+
+    &__heading {
+        font-family: Lato;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #4d4d4d;
+
+        padding-top: 17px;
+        padding-bottom: 67px;
+    }
+
+    &__text {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #5e5e5e;
+
+        padding-bottom: 28px;
+
+        width: 620px;
+
+        text-align: center;
+    }
+
+    &__left {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #b9b9b9;
+    }
+
+    &__right {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #b9b9b9;
+    }
+
+    &__cotton {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+
+        color: #2f2f2f;
+    }
+
+    &__designer {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+
+        color: #2f2f2f;
+    }
+
+    &__price {
+        font-family: Lato;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+        color: $singlPageEf5b70;
+
+        border-bottom: 1px solid #eaeaea;
+        width: 642px;
+
+        padding-top: 37px;
+        padding-bottom: 43px;
+
+        text-align: center;
+
+    }
+
+}
+
+.boxdesc {
+    display: flex;
+    gap: 44px;
+}
+
+.boxbottom {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__box {
+        display: flex;
+        gap: 53px;
+    }
+
+    &__inside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        text-align: left;
+    }
+
+    &__sort {
+        width: 144px;
+        height: 35px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        margin-top: 16px;
+        margin-bottom: 28px;
+
+        padding-left: 14px;
+        padding-right: 9px;
+
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #bcbcbc;
+    }
+
+    &__text {
+        margin-right: 67px;
+    }
+
+    &__color {
+        width: 12px;
+        height: 12px;
+        background-color: #ef5b70;
+    }
+
+}
+
+.buttonAdd {
+    &__text {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $singlPageEf5b70;
+
+        display: block;
+        box-sizing: border-box;
+        width: 537px;
+        height: 55px;
+        background-color: #ffffff;
+        border: 1px solid $singlPageEf5b70;
+
+        padding-top: 15px;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+
+    &__text:hover {
+        @include hover-button(#fff, $hoverLink, 0.5s);
+
+    }
+}
+
+.fa-cart-shoping {
+    background-color: $singlPageEf5b70;
+}
+
+.items__header {
+    margin-top: 50px;
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+.items__headerblock {
+    font-family: Lato;
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #4d4d4d;
+}

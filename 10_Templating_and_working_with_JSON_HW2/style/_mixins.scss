@@ -1,0 +1,17 @@
+@mixin betweenflex() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin hover-button ($color, $background-color, $transition) {
+    color: $color;
+    background-color: $background-color;
+    transition: all $transition;
+}
+
+@mixin hover-link ($color, $transition) {
+    color: $hoverLink;
+    transition: all 0.3s;
+}
