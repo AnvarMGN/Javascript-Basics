@@ -1,0 +1,316 @@
+.shopping-cart {
+
+    &__block {
+        padding-top: 90px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 80px;
+
+        padding-bottom: 20px;
+
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    &__heading {
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.015em;
+        color: #222222;
+    }
+
+    &__img {
+        margin: 22px 0px 22px;
+    }
+
+    &__img:hover {
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
+    }
+
+    &__about-prod {
+        display: flex;
+        flex-direction: row;
+        gap: 21px;
+
+        margin-right: 240px;
+    }
+
+    &__prod-description {
+
+        &_heading {
+            font-family: Lato;
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #222222;
+
+            padding-top: 35px;
+            padding-bottom: 39px;
+        }
+    }
+
+    &__color {
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+
+        color: #575757
+    }
+
+    &__prod {
+        font-weight: 300;
+        color: #6f6e6e;
+    }
+
+    &__prod-info {
+        display: flex;
+        flex-direction: row;
+
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    &__about-text {
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #656565;
+
+        text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 112px;
+    }
+
+    &__quantity {
+        width: 54px;
+        height: 30px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+
+        text-align: center;
+    }
+
+    &__action-box {
+        padding-top: 44px;
+        padding-bottom: 63px;
+
+        display: flex;
+        justify-content: space-between;
+
+        &_button {
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4a4a4a;
+
+            width: 235px;
+            height: 50px;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+        }
+
+        &_button:hover {
+            @include hover-button(#fff, $hoverLink, 0.5s)
+        }
+    }
+
+}
+
+.left {
+    padding-right: 300px;
+}
+
+.buy-box {
+    display: flex;
+    gap: 36px;
+
+    padding-bottom: 79px;
+
+    &__shipping {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    &__heading {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+    }
+
+    &__input-text {
+        padding-left: 15px;
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #b1b1b1;
+
+        width: 355px;
+        height: 45px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+
+        text-align: start;
+    }
+
+    &__button {
+        font-family: Lato;
+        font-size: 11px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+
+        width: 100px;
+        height: 35px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+
+        &_discount {
+            font-family: Lato;
+            font-size: 11px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4a4a4a;
+
+            width: 118px;
+            height: 35px;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+
+            &:hover {
+                @include hover-button(#fff, $hoverLink, 0.5s)
+            }
+        }
+    }
+
+    &__button:hover {
+        @include hover-button(#fff, $hoverLink, 0.5s)
+    }
+
+    &__discount {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        &_text {
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #000000;
+        }
+    }
+
+    &__total {
+        box-sizing: border-box;
+
+        width: 360px;
+        height: 214px;
+        background-color: #f5f3f3;
+
+        padding: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__subtotal {
+        &_text {
+            font-family: Lato;
+            font-size: 11px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #4a4a4a;
+        }
+
+        &_sum {
+            font-family: Lato;
+            font-size: 11px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #4a4a4a;
+        }
+
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        padding-bottom: 14px;
+    }
+
+    &__grandtotal {
+        &_text {
+            font-family: Lato;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #222222;
+        }
+
+        &_sum {
+            font-family: Lato;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $hoverLink;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 20px;
+
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+
+        border-bottom: 1px solid #e2e2e2;
+        width: 275px;
+    }
+
+    &__buttonlink {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+
+        display: block;
+        width: 273px;
+        height: 50px;
+        background-color: #f16d7f;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__buttonlink:hover {
+        @include hover-button($hoverLink, #fff, 0.5s);
+    }
+}
